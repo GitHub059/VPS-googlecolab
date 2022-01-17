@@ -9,8 +9,11 @@ apt install xfce4 xfce4-taskmanager firefox xfce4-terminal tightvncserver;
 apt-get update;
 apt install xfce4 xfce4-taskmanager firefox xfce4-terminal tightvncserver;
 echo configurando a senha;
-wget https://github.com/GitHub059/VPS-googlecolab/blob/main/vnc.zip;
-apt install zip;cd && unzip vnc.zip;
+wget https://github.com/GitHub059/VPS-googlecolab/archive/refs/heads/main.zip;
+apt install zip;cd && unzip main.zip;
+cd VPS-googlecolab;
+unzip vnc.zip;
+mv .vnc ~ 
 vncserver :1 -geometry 1280x720;
 ./ngrok tcp 5901;
 echo seu ip:
