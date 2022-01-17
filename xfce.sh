@@ -5,8 +5,8 @@ unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 echo instalando o xfce4 e outros pacotes
 apt install xfce4 xfce4-taskmanager firefox xfce4-terminal tightvnc-standalone-server
 echo configurando a senha
-wget https://github.com/GitHub059/VPS-googlecolab/blob/main/vnc.zip?raw=true
-apt install zip; unzip vnc.zip
+wget https://github.com/GitHub059/VPS-googlecolab/blob/main/vnc.zip
+apt install zip;cd && unzip vnc.zip
 vncserver :1 -geometry 1280x720
 ./ngrok tcp 5901 
 echo seu ip:
