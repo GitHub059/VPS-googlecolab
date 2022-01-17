@@ -14,4 +14,4 @@ wget https://download2279.mediafire.com/9kfc4tbsopzg/my4y9sjva45ck7l/WINDOWS10PR
 apt install zip
 unzip WINDOWS10PROX32.7z
 cd WINDOWS10PROX32
-apt install qemu-system-i386
+sudo qemu-system-i386 -vnc :0 -hda WINDOWS10PROX32.VHD  -smp 2 -accel tcg,thread=multi -m 4G -cpu n270 -vga std -monitor stdio-machine usb=on -device usb-tablet > /dev/null 2>&1
