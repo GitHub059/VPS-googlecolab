@@ -1,0 +1,5 @@
+wget https://download2279.mediafire.com/9kfc4tbsopzg/my4y9sjva45ck7l/WINDOWS10PROX32.7z
+apt install zip
+unzip WINDOWS10PROX32.7z
+cd WINDOWS10PROX32
+apt install qemu-system-i386
