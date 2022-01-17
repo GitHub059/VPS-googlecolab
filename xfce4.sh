@@ -1,2 +1,3 @@
 apt install xfce4 tigervnc-standalone-server
-vncserver
+vncserver :1
+./ngrok tcp 5901 --region sa
