@@ -10,9 +10,7 @@ sudo apt install qemu-system-i386 curl -y > /dev/null 2>&1
 echo cole seu ip no vncviw... somente depois que "completado" :
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo WIN10 está a ser instalado, aguarde... !
-curl -L -o WINDOWS10PROX32.7z https://download2279.mediafire.com/9kfc4tbsopzg/my4y9sjva45ck7l/WINDOWS10PROX32.7z
-sudo apt-get install p7zip-full
-7z x WINDOWS10PROX32.7z
-cd WINDOWS10PROX32
-sudo qemu-system-i386 -vnc :0 -hda WINDOWS10PROX32.VHD  -smp 2 -accel tcg,thread=multi -m 4G -cpu n270 -vga std -monitor stdio-machine usb=on -device usb-tablet > /dev/null 2>&1
+wget https://software-download.microsoft.com/pr/Win10_21H2_BrazilianPortuguese_x32.iso?t=e44c09d4-fb0a-4450-9e77-2699abb2e4db&e=1642520246&h=67fb007af3817b91ac92e8a9119847ce
+qemu-img create -f hd.img 35G
+sudo qemu-system-i386 -vnc :0 -cdrom Win10_21H2_BrazilianPortuguese_x32.iso -hda hd.img -smp 2 -accel tcg,thread=multi -m 4G -cpu n270 -vga std -monitor stdio-machine usb=on -device usb-tablet > /dev/null 2>&1
 echo completo, pode colocar no vnc ^-^
