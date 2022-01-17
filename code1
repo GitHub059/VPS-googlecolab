@@ -1,3 +1,13 @@
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+read -p "cole sua chave ngrok, copie e cole e pressione enter: " CRP
+./ngrok authtoken $CRP 
+nohup ./ngrok tcp 5900 --region sa &>/dev/null &
+echo instalando depedencias aguarde...
+sudo apt update -y > /dev/null 2>&1
+echo instalando o qemu, em seguida vem o win...
+sudo apt install qemu-system-i386 curl -y > /dev/null 2>&1
+echo WIN10 está a ser instalado, aguarde... !
 wget https://download2279.mediafire.com/9kfc4tbsopzg/my4y9sjva45ck7l/WINDOWS10PROX32.7z
 apt install zip
 unzip WINDOWS10PROX32.7z
