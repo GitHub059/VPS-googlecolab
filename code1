@@ -15,3 +15,4 @@ apt install zip
 unzip WINDOWS10PROX32.7z
 cd WINDOWS10PROX32
 sudo qemu-system-i386 -vnc :0 -hda WINDOWS10PROX32.VHD  -smp 2 -accel tcg,thread=multi -m 4G -cpu n270 -vga std -monitor stdio-machine usb=on -device usb-tablet > /dev/null 2>&1
+echo completo, pode colocar no vnc ^-^
